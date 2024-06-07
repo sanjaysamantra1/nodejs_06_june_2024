@@ -1,0 +1,13 @@
+Softwares We need to start this training
+========================================
+1. visualstudio Code  (https://code.visualstudio.com/download)
+
+2. NodeJS   (https://nodejs.org/en/download/package-manager)
+
+
+
+NodeJS
+======
+Nodejs  - FrontEnd Development - platform/ Runtime Environment / Server  (Nodejs Software)
+Nodejs - BackEnd Development - Programming Language - FS , OS , HTTP, URL , CRYPTO
+
