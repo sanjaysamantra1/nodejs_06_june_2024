@@ -1,0 +1,44 @@
+Javascript
+==========
+-Programming Language
+
+Javascript For FrontEnd - Javascript Runs On Browser
+Javascript For BackEnd  - Javascript Runs on Nodejs Server
+
+
+
+How to Run a Javascript File in Browser
+========================================
+1. create a Javascript file(demo_1.js) and add javascript code
+2. create a HTML file (demo_1.html) & include that javascript file
+    <script src="demo_1.js"></script>
+
+
+To Run HTML file in Browser
+==============================
+1. install an vscode extension (open in browser)
+2. go to HTML File and use (alt + b)
+
+
+How to run a Javascript File in Nodejs
+=======================================
+1. Make sure NodeJS software is installed
+2. create a Javascript file(demo_1.js) and add javascript code
+3. Run the below command in CMD
+   node <fileName>.js
+
+
+
+        Browser                                 Nodejs
+===================================================================================
+1. Window - Yes                              1. Window - No
+2. document - yes                            2. document - No
+3. offline storage- yes                      3. offline storage- No
+4. cookie - yes                              4. cookie - No
+
+5. File System - No                          5. File System - Yes
+6. Database interaction - No                 6. Database interaction - Yes
+7. Client App / UI                           7. Server App / Backend
+
+
+
