@@ -1,0 +1,44 @@
+variables
+=========
+var 
+let 
+const
+
+
+
+        var                          let                           const
+===================================================================================
+1. re-assignment - Yes        1. re-assignment - yes             1. re-assignment - No
+2. initialization-Not         2. initialization-Not              2. initialization-Mandatory
+3. since the begining         3. ECMASCRIPT - 6 (2015)           3. ECMASCRIPT - 6 (2015)
+4. can be re-declared         4. cann't be re-declared           4. cann't be re-declared
+5. global,function            5. global,function,block           5. global,function,block
+
+
+
+Variable Scopes
+===============
+1. global
+2. function / Local To a function
+3. Block   / Local to a block
+
+
+
+Javascript - Is a Programming Language, follows ECMASCRIPT Standards
+ECMASCRIPT - is a standard , followed by javascript 
+ECMA - European Computer Manufecturer Association
+
+ES 4      <2009
+ES 5      2009
+ES 6      2015   (let,const,class,module.....)
+ES 7      2016
+ES 8      2017
+ES 9      2018
+ES 10     2019
+ES 11     2020
+ES 12     2021
+ES 13     2022
+ES 14     2023
+
+
+
