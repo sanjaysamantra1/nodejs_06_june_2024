@@ -9,3 +9,6 @@ age = 45;
 console.log(name)
 console.log(age)
 console.log(add)
+
+
+
