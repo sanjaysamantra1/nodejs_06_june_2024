@@ -1,0 +1,38 @@
+Hoisting:
+=========
+-The process of assigning variable declarations a default value of 'undefined' during the creation phase is called Hoisting.
+-In hoisting, the variable and function declarations are put into memory during the	compile/creation phase before code execution phase.
+
+N:p - All variables (var,let,const) are hoisted but only 'var' variables are usable/reachable before initialization.
+-let/const variables are not reachable/usable before initialization (Temporal Dead Zone)
+
+
+
+Temporal Dead Zone
+==================
+-The period between entering scope and being declared where they cannot be accessed. 
+ This period is the temporal dead zone (TDZ).
+-The state where variables are un-reachable. They are in memory, but they aren't usable.
+-The let and const variables exist in the TDZ from the start of their enclosing scope until they are initialized.
+-if a let/const variable is accessed before its declaration, it would throw a ReferenceError. Because of the TDZ.
+
+
+Use Strict
+==========
+-Provides better coding standard and stronger error checking.
+-The purpose of 'use strict' is to execute the javascript code in strict mode.
+-when 'use strict' is not written, browser/NodeJS runs the JS in normal mode.
+-when 'use strict' is  written, browser/Nodejs runs the JS in strict mode.
+-Strict mode changes some previously-accepted mistakes into errors.
+-'use strict' should be added at the top of the script/function
+
+
+1. variable declaration without var/let/const is not allowed.
+   makes it impossible to accidentally create global variables.
+2. function with duplicate arguements are not allowed.
+3. NaN/undefined/Infinity cann't be used as a variable name.
+4. Delete of an unqualified identifier in strict mode. 
+    ex:delete Object.prototype; 
+	var x = 5; delete x;
+5. Multiple assignments not allowed.
+   var a = b = c = 3;
