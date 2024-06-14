@@ -1,0 +1,36 @@
+Function
+=========
+1. pre-defined / inbuilt 
+   -The functions are already written, we just have to use them
+   -console.log(), document.write()
+
+2. user-defined
+   -We have to write the function & use
+
+
+a. Function Declaration (Named Function)
+b. Function Expression  (Anonymous function)
+c. self invoked   (Immediately Invoked function Expression)
+d. Arrow Function (ES - 6   2015)
+
+
+Function Declaration Vs Function Expression
+============================================
+1. Function Declaration - Named Function , Function Expression - Anonymous
+2. Function Declaration can be invoked before the declaration statement - Hoisting
+   Function Expression cannt be invoked before the declaration statement - Hoisting - No
+
+
+Regular Function: (How 'this' works inside Regular Function)
+this = How the function is called / From Where the function is called
+this is dynamic, it changes 
+
+Arrow Function: (How 'this' works inside Arrow Function)
+this = where the function is declared
+this value is static
+
+
+Limitation of Arrow function
+==============================
+1. arrow functions should not be used as object methods.
+2. don't use arrow functions, if 'this' value should be dynamic inside a function.
