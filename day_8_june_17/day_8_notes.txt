@@ -1,0 +1,38 @@
+-when a regular function gets called inside setTimeout, inside that function this=window/global
+
+
+Chrome - V8
+Firefox - SpiderMonkey
+IE - Chakra
+
+Nodejs - V8
+
+
+
+Function Curring
+================
+-Function Currying is a concept of breaking a function with many arguments into many functions with single argument in such a way, that the output is same. 
+-its a technique of simplifying a multi-valued argument function into single-valued argument multi-functions.
+-It helps to create a higher-order function. It is extremely helpful in event handling.
+
+	var add = function (a){
+                 return function(b){
+                       return function(c){
+                                 return a+b+c;
+                              }        
+                        }
+                  }
+	console.log(add(2)(3)(4)); //output 9
+
+
+Pure Function
+=============
+-Pure functions are functions that accept an input and returns a value without 
+ modifying any data outside its scope(Side Effects). 
+ 
+-A function is called pure if that follows the below 3 standards
+	1. Pure functions shouldn't update the data outside it's scope.
+	2. pure functions must return a value.
+	3. Its output or return value must depend on the input/arguments.
+
+

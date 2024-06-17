@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Btn-1</button>
+    <button id="btn2">Btn-2</button>
+
+    <script>
+        function changeColor() {
+            // regular - this : from where the function is called
+            // this - not static(dynamic)
+            console.log(this);  // this = window / Btn-1
+        }
+        changeColor();
+        document.getElementById('btn1').addEventListener('click', changeColor);
+
+        changeColor2 = () => {
+            // Arrow - this : where the function is declared
+            // this = window (all the time) (this - static)
+            console.log(this , 'changecolor-2');
+        }
+        changeColor2(); // window
+        document.getElementById('btn2').addEventListener('click', changeColor2);
+    </script>
+</body>
+
+</html>
