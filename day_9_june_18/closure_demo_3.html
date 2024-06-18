@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script>
+        function initializeCount() {
+            var count = 0; // it has to be a function variable
+
+            return function () {
+                ++count;
+                document.querySelector('span').innerText = count;
+            }
+        }
+        var incrementCount = initializeCount();
+        console.dir(incrementCount)
+
+        function sayHello() {
+            console.log('Hellloooooooo');
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="incrementCount()">Increment Count</button>
+    <button onclick="sayHello()">Say Hello</button>
+    <h1>Count value is <span>0</span> </h1>
+</body>
+
+</html>

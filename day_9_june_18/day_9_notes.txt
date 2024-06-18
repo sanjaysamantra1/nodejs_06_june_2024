@@ -1,0 +1,17 @@
+function closure
+================
+-A closure is an inner function that has access to its outer function's variables even after the outer function's execution is Completed/Closed.
+
+-When the outer function execution completes, you’d expect all its variables to be no longer accessible. However, if the inner function uses variables from the outer function, those variables remain accessible.
+
+-The inner function retains access to the outer function’s scope, because the inner function ‘remembers’ the environment in which it was created.
+
+-only the inner functions will have a closure scope, closure scope will be there for an inner function only if the inner function accesses outer function data
+
+
+OOP features 
+============
+1. Encapsulation - Closure
+2. Inheritance
+3. Polymorphism
+4. Abstraction

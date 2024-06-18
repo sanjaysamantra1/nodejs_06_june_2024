@@ -1,0 +1,24 @@
+<script>
+    var a = 10;  // global variable , global scope
+    let b = 20;  // global variable, script scope
+
+    function f1() {
+        let c = 30;
+        console.log(a, b, c)
+
+        function f2() {
+            let d = 40;
+            console.log(a, b, c, d);
+
+            function f3() {
+                console.log(a, b, c);
+            }
+            f3();
+            console.dir(f3)
+        }
+        f2();
+        console.dir(f2)
+    }
+    f1();
+    console.dir(f1);
+</script>

@@ -1,0 +1,35 @@
+<script>
+    var account = { accNo: 12345, accBal: 5000 };
+    // account - is it encapsulated?
+    console.log(account.accNo, account.accBal); // Read
+    account.accBal = -50000; // Write
+    console.log(account.accNo, account.accBal); // Read
+
+    function openAccount(initialBal) {
+        let accNo = 112233;
+        let accBal = initialBal;
+
+        return Object.freeze({
+            deposit: function (amt) {
+                if (amt < 0) {
+                    console.log('Sorry, I dont need your money')
+                } else {
+                    accBal = accBal + amt;
+                    console.log(`${amt} is deposited in your account`)
+                }
+            },
+            display: function () {
+                console.log(accNo, accBal)
+            }
+        })
+    }
+    let encapsulatedAccount = openAccount(3000);
+    console.log(encapsulatedAccount);
+    encapsulatedAccount.display();
+    encapsulatedAccount.deposit(-4000)
+    encapsulatedAccount.deposit(4000)
+    encapsulatedAccount.display();
+
+    console.dir(encapsulatedAccount.display)
+    console.dir(encapsulatedAccount.deposit)
+</script>
