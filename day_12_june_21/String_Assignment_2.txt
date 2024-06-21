@@ -15,8 +15,8 @@
    output: 'R. N. tagore'
 
 5. Shift the characters by the next character
-   input:  'abcxyz'
-   output: 'bcdyza'
+   input:  'abcxyz'  'gqtrd'
+   output: 'bcdyza'  'hruse'
 
 6. Ask user to enter a sequence of parantheses and validate 
    input: '([{ }])'
@@ -25,3 +25,4 @@
 7. Ask user to enter a 3 letter word, print all the permutations using those 3 letters.
     input: 'ABC'
     output: ABC , ACB , BCA, BAC ...
+
