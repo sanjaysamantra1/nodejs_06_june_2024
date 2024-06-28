@@ -1,0 +1,17 @@
+<script>
+    let arr1 = [10, 20];
+    let arr2 = arr1;    // Reference Copy / Address Copy
+    // here 2 arrays are not being created, there is only 1 array 2 variables are holding the
+    // address of the same array
+    arr1.push(30);
+    console.log(arr1, arr2);
+    arr2.push(40);
+    console.log(arr1, arr2);
+
+    // Copy By Value (a.shallow Copy  b. deep Copy)
+    let arr3 = [100, 200];
+    let arr4 = [...arr3]; // creates a new array and copies the values from arr3 to arr4
+    arr3.push(300);
+    arr4.push(400);
+    console.log(arr3, arr4); 
+</script>

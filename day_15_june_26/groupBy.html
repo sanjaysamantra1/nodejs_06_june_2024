@@ -1,0 +1,22 @@
+<script>
+    let employees = [
+        { eId: 101, name: "sanjay", sal: 5000, gender: "male" },
+        { eId: 103, name: "Geeta", sal: 5500, gender: "female" },
+        { eId: 102, name: "deepak", sal: 6000, gender: "male" },
+        { eId: 104, name: "reena", sal: 5000, gender: "female" },
+        { eId: 105, name: "manoj", sal: 7000, gender: "male" }
+    ]
+    // groupBy 'gender'
+    // output = {'male':[] , 'female':[]}
+    let output = {};
+    for (emp of employees) {
+        let genderValue = emp.gender;
+        if (output[genderValue]) {
+            output[genderValue].push(emp);
+        } else {
+            output[genderValue] = [];
+            output[genderValue].push(emp);
+        }
+    }
+    console.log(output)
+</script>
