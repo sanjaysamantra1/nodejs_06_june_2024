@@ -1,0 +1,22 @@
+<script>
+    let dateObj1 = new Date();
+    console.log(dateObj1.getDate());
+    console.log(dateObj1.getDay()); // day number
+    // console.log(dateObj1.getDayName()); // day number
+
+    Date.prototype.getDayName = function () {
+        const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const dayNumber = this.getDay(); // this = dateObj2 / dateObj3 / dateObj4
+        return dayNames[dayNumber];
+    }
+    let dateObj2 = new Date();
+    console.log(dateObj2.getDayName())
+
+    let dateObj3 = new Date('Thu Jun 27 2024 21:02:12 GMT+0530');
+    console.log(dateObj3.getDayName())
+
+    let dateObj4 = new Date('Tue Jun 25 2024 21:02:12 GMT+0530');
+    console.log(dateObj4.getDayName())
+
+    // dateObj.getDayName()
+</script>

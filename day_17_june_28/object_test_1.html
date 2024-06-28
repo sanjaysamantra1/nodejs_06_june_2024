@@ -1,0 +1,24 @@
+<script>
+    let obj1 = { a: 10, b: 20 };
+    let obj2 = obj1; // Address Copy
+    obj1.a = 15;
+    obj2.b = 25;
+    console.log(obj1.a, obj1.b); // 15 25
+    console.log(obj2.a, obj2.b); // 15 25
+
+    let obj3 = { x: 100, y: 200 };
+    let obj4 = Object.create(obj3);
+    obj3.x = 150;
+    console.log(obj3.x, obj3.y); // 150  200
+    console.log(obj4.x, obj4.y); // 150  200
+    console.log(obj3, obj4)
+    obj4.y = 250; // its not updating the prototype, adding a new direct property
+    console.log(obj3.x, obj3.y); // 150  200
+    console.log(obj4.x, obj4.y); // 150  250
+
+    console.log('Direct Property - y', obj4.y);
+    console.log('Prototype Property - y', obj4.__proto__.y);
+
+    // Class  : ClassName.prototype.variableName
+    // object Literal :  object.__proto__.variableName
+</script>

@@ -1,0 +1,32 @@
+<script>
+    class Student {
+        roll; name; mark; // instance 
+        constructor(roll, name, mark) {
+            this.roll = roll;
+            this.name = name;
+            this.mark = mark;
+        }
+        printName = function () {  // instance method
+            console.log(this.name)
+        }
+        printMark() { // prototype
+            console.log(this.mark)
+        }
+    }
+    Student.prototype.clgName = 'nareshIT';
+    Student.prototype.clgAddress = 'Ameerpet';
+    Student.prototype.printRoll = function () {
+        console.log(this.roll);
+    }
+
+    let std1 = new Student(101, 'Manoj', '8-A')
+    let std2 = new Student(102, 'Deepak', '7-B')
+    let std3 = new Student(103, 'Geeta', '8-C')
+    console.log(std1) // every object has 3 properties
+    console.log(std2) // 1000 * 3 = 3000
+    console.log(std3)
+    console.log(std1.name, std1.clgName, std1.clgAddress);
+    std1.clgName = 'nareshInfoTech'; // it adds a property in std1 obj , clgName : 'nareshInfoTech'
+    console.log(std1.clgName, std2.clgName, std3.clgName);
+
+</script>

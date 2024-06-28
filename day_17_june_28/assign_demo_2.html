@@ -1,0 +1,11 @@
+<script>
+    let obj1 = { a: 10, b: 20 };
+
+    let obj2 = obj1; //address copy / reference
+
+    let obj3 = Object.assign({}, obj1); // value copy - Shallow
+    let obj4 = { ...obj1 }; // value copy - Shallow
+
+    let obj5 = structuredClone(obj1); // value copy - Deep copy
+
+</script>
