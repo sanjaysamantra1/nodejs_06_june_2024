@@ -1,0 +1,15 @@
+<script>
+    function greet() {
+        console.log(`Helloooo ${this.name}`);
+    }
+    greet();
+
+    let obj1 = { name: 'sanjay' };
+    greet.call(obj1);
+
+    let obj2 = { name: 'Deepak' };
+    greet.call(obj2);
+
+    let obj3 = { name: 'Praveen' };
+    greet.call(obj3);
+</script>

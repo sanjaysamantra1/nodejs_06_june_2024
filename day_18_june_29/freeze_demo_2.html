@@ -1,0 +1,26 @@
+<script>
+    function createStack() {
+        let items = []
+        function push(number) {
+            items.push(number);
+        }
+        function pop() {
+            if (items.length === 0)
+                return "Oops, the stack is empty!";
+            return items.pop();
+        }
+        function peek() {
+            return items[items.length - 1];
+        }
+        return Object.freeze({ push, pop, peek });
+    }
+
+    let stackObj = createStack();
+    delete stackObj.pop;
+    stackObj.peek = ()=>console.log('hiiiii');
+    console.log(stackObj)
+    stackObj.push(10)
+    stackObj.push(20)
+    stackObj.push(30)
+    console.log(stackObj.peek()); // 30
+</script>

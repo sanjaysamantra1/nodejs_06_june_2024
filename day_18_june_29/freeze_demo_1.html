@@ -1,0 +1,17 @@
+<script>
+    let emp = { name: 'sanjay', sal: 5000, age: 40 };
+    emp.add = 'Bangalore'; // add new property - Yes
+    emp.sal = 6000;  // update property value - Yes
+    delete emp.age;  // delete a property - Yes
+    console.log(emp);
+
+    let user = { name: 'sachin', age: 50, add: 'mumbai' };
+    Object.freeze(user); // user object is frozen
+    user.gender = 'male' // add a new prop - No
+    user.age = 52; // No
+    delete user.add; // No
+    console.log(user);
+
+    console.log(Object.isFrozen(emp))
+    console.log(Object.isFrozen(user))
+</script>
