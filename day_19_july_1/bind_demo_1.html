@@ -1,0 +1,24 @@
+<script>
+    let obj1 = {
+        myName: 'sachin',
+        displayName: function () { // this = obj1
+            console.log('I am displayName function')
+            console.log(this.myName);
+        }
+    }
+    obj1.displayName();
+
+    let a = obj1.displayName;
+    a();
+
+    let b = obj1.displayName.bind(obj1);
+    // bind displayName() & obj1 , return a new function
+    // that newly returned function is bound with obj1. this = obj1
+    b();
+
+    let c = b;
+    c();
+
+    let d = c;
+    d();
+</script>

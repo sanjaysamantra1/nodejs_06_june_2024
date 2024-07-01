@@ -1,0 +1,13 @@
+<body>
+    Username* :
+    <input type="text" />
+    Password :
+    <input type="text" onpaste="f1(event)" />
+
+    <script>
+        function f1(event) {
+            event.preventDefault(); // stop paste 
+            alert('paste is disabled here')
+        }
+    </script>
+</body>

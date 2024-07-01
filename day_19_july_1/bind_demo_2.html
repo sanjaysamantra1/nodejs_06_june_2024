@@ -1,0 +1,14 @@
+<script>
+    let user = {
+        firstName: 'Sachin',
+        lastName: ' Tendulkar',
+        fullName: function () {
+            console.log('hello ' + this.firstName + this.lastName);
+        }
+    }
+    user.fullName();
+
+    setTimeout(user.fullName, 1000);
+    let newFullName = user.fullName.bind(user);
+    setTimeout(newFullName, 2000);
+</script>

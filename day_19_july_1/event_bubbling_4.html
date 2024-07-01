@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .myStyle {
+            display: table-cell;
+            padding: 20px;
+            border: 5px solid black;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+        <div id="div1" class="myStyle">
+            Div-1
+            <div id="div2" class="myStyle">
+                Div-2
+                <div id="div3" class="myStyle">
+                    Div-3
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function f1() {
+                console.log(`F1 function got triggered from ${this.id}`);
+            }
+            // Event Bubbling
+            // document.getElementById('div1').addEventListener('click', f1);
+            // document.getElementById('div2').addEventListener('click', f1);
+            // document.getElementById('div3').addEventListener('click', f1);
+
+            // Event Capturing
+            document.getElementById('div1').addEventListener('click', f1, true);
+            document.getElementById('div2').addEventListener('click', f1, true);
+            document.getElementById('div3').addEventListener('click', f1, true);
+        </script>
+</body>
+
+</html>

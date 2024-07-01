@@ -1,0 +1,15 @@
+<body>
+    Username* :
+    <input type="text" />
+    Password :
+    <input type="text" onpaste="f1(event)" />
+
+    <script>
+        document.addEventListener('contextmenu', f1);
+
+        function f1(e) {
+            e.preventDefault(); // stop paste 
+            alert('Right click is not allowed here')
+        }
+    </script>
+</body>
