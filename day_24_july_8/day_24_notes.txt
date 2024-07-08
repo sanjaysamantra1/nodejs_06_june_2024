@@ -1,0 +1,57 @@
+Nodemon
+=======
+-Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
+-Nodemon can be installed using NPM.
+ ex:- npm i -g nodemon
+-Nodemon can be used without installing also, using npx
+ npx nodemon file1.js
+-nodemon help
+ nodemon -h 
+ nodemon --help
+-Just use nodemon instead of node to run your code, your process will automatically restart when your code changes
+ ex:- node file1.js      (server won't be re-started when code is changed)
+      nodemon file1.js   (server gets re-started when there is a code change)
+	  npx nodemon file1.js   (server gets re-started when there is a code change)
+-The 'node_modules' folder is ignored by default by nodemon.
+-You can restart the process at any time by typing 'rs' and hitting enter.
+
+
+NodeJs Modules
+==============
+-A way of encapsulating code in to separate logical units.
+-Module:A set of functions you want to include in your application.
+-In Node.js module system, each file is treated as a separate module.
+-Node.js includes three types of modules:
+	1. Core(Built-in) Modules     	  (os,fs,http,process,path,url)
+	2. Local(Custom) Modules    	  (created locally in our application)
+	3. Third Party(External) Modules  (can be installed using NPM, and can be used) ex:-minimist,express,mongoose,lodash,moment,chalk,cors,axios
+
+
+Local(Custom) Modules 
+=====================
+-Node.js has two types of modules: 
+	1. ES modules 
+	2. CommonJS modules
+-By default, Node.js treats JavaScript as CommonJS modules. But we can tell Node.js to treat JavaScript code as ES modules.
+-Node.js will treat the following files as ES modules:
+	a.Files ending in .mjs
+	b.if "type": "module" is set in package.json
+
+
+CommonJS
+=========
+module.exports = {}
+require()
+
+
+ESM
+===
+export (1. named export 2. default export)
+import { add, sub, mul } from "./Math_Util_ES";
+
+Note:
+=====
+-A module cannot have multiple default exports.
+-default export cann't be used to export variables.
+-Default exports can be imported with any name
+-named exports has to be imported with the same name it is exported
