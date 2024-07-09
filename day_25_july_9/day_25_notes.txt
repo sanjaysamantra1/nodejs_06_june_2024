@@ -1,0 +1,52 @@
+Node.js OS Module
+=================
+-The OS module provides information about the computer's operating system.
+
+arch()	      Returns the operating system CPU architecture-32/64
+cpus()	       Returns an array containing information about the computer's CPUs
+endianness()	Returns the endianness of the CPU (LE-Little Endian , BE-Big Endian)
+EOL	Returns the end-of-line marker for the current operating system
+freemem()	Returns the number of free memory of the system
+hostname()	Returns the hostname of the operating system
+loadavg()	Returns an array containing the load averages, (1, 5, and 15 minutes)
+networkInterfaces()	Returns the network interfaces that has a network address
+platform()	Returns information about the operating system's platform
+release()	Returns information about the operating system's release
+tmpdir()	Returns the operating system's default directory for temporary files
+totalmem()	Returns the number of total memory of the system
+type()	    Returns the name of the operating system
+uptime()	Returns the uptime of the operating system, in seconds
+userInfo()	Returns information about the current user
+availableParallelism() 
+constants	 Returns an object containing the operating system's constants for process signals, error cotes etc.
+
+
+
+Node.js fs module
+=================
+-The fs module provides a lot of very useful functionality to access and interact with the file system.
+-There is no need to install it. Being part of the Node.js core, it can be used by simply requiring it. and have access to all its methods.
+
+ex: 
+const fs = require('fs');
+fs.readFile(fileName [,options], callback)	Reads existing file.
+fs.writeFile(filename, data[, options], callback)	Writes to the file. If file exists then overwrite the content otherwise creates new file.
+fs.open(path, flags[, mode], callback)	Opens file for reading or writing.
+fs.rename(oldPath, newPath, callback)	Renames an existing file.
+fs.chown(path, uid, gid, callback)	Asynchronous chown.
+fs.stat(path, callback)	Returns fs.stat object which includes important file statistics.
+fs.link(srcpath, dstpath, callback)	Links file asynchronously.
+fs.unlink(path, callback);	Delete a file.
+fs.symlink(destination, path[, type], callback)	Symlink asynchronously.
+fs.rmdir(path, callback)	Renames an existing directory.
+fs.mkdir(path[, mode], callback)	Creates a new directory.
+fs.readdir(path, callback)	Reads the content of the specified directory.
+fs.utimes(path, atime, mtime, callback)	Changes the timestamp of the file.
+fs.exists(path, callback)	Determines whether the specified file exists or not.
+fs.access(path[, mode], callback)	Tests a user's permissions for the specified file.
+fs.appendFile(file, data[, options], callback)	Appends new content to the existing file.
+
+
+Assignment
+==========
+read content from file1.txt & file2.txt , write both the contents in to file3.txt
