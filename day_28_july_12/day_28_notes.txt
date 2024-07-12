@@ -1,0 +1,17 @@
+Route-Parameter
+===============
+1. PathParam
+-passed after /
+ ex:- /productDetails/101
+-Need to define in the route
+ ex: app.get('users/:id')
+-If defined than need to pass in url
+-only 1 value can be passed
+
+2. QueryParam
+-passed after ?
+  ex: /search?searchWord=skybag&filter=something
+-No Need to define in the route
+  ex: app.get('users')
+-not complusory to pass
+-used to pass multiple values.
