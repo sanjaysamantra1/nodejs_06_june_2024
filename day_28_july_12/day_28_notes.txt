@@ -15,3 +15,20 @@ Route-Parameter
   ex: app.get('users')
 -not complusory to pass
 -used to pass multiple values.
+
+
+
+Assignment
+===========
+Create 1 user CRUD application with below routes
+a. home
+b. /users   (All users)
+c. /users/1 (1 user)
+d. /users  (POST)  
+   user added succesfully
+e. /users   PUT
+  user updated succesfully
+f. /users   PATCH
+  user updated succesfully
+g. /users   DELETE
+  user Deleted succesfully
