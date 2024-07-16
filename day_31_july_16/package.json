@@ -1,0 +1,13 @@
+{
+  "name": "day_31_july_16",
+  "version": "1.0.0",
+  "description": "",
+  "main": "6_routing_demo_2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon 6_routing_demo_2.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
