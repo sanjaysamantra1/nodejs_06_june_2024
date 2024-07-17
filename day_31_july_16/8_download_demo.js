@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
     res.send(`
         please follow the below 2 Links to either open / download the file
         <br/>
@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
     `)
 })
 
-app.get('/sendFile', (req, res) => {
+app.get('/sendFile', logger, (req, res) => {
     res.sendFile(path.resolve(__dirname, 'nodejs.png'));
     console.log(path.resolve(__dirname, 'nodejs.png'))
 });

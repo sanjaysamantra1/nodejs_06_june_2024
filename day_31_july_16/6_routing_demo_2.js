@@ -9,7 +9,7 @@ function logger(req,res,next){
     console.log('The time is: '+ Date.now())
     next(); // transfers the request to actual route
 }
-app.use(logger);
+// app.use(logger);
 
 
 app.get('/', (req, res) => {

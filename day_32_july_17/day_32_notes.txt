@@ -1,0 +1,22 @@
+Middlewares
+===========
+-Middlewares are like a middleman between a request and the response in a REQUEST → RESPONSE cycle.
+-Middlewares in ExpressJS are functions that can modify Request and Response objects.
+-Either to retrieve something from request Object or store Some relevant informationin response object.
+-An example of a simple express js middleware could be to log the current date and time on every URL the user visits on our website.
+
+req => middleware => res
+
+
+
+built-in middlewares
+====================
+express.static
+
+
+const logger = (req, res, next) => {
+  console.log('The time is: '+ Date.now())
+  next();
+}
+
+app.use(logger);
