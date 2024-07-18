@@ -1,0 +1,45 @@
+callback
+Promise
+Async - await
+======================
+
+1. callback
+  fs.readFile('filePath', callback)
+  callback hell
+2. Promise
+-A promise is an object that holds the future value of an asynchronous operation.
+-A Promise object represents a value that is not available now, but will be resolved/available at some point in the future.
+-Promise object can have different states:- pending, resolved/fulfilled, rejected.
+ex:-if we request some data from a server, promise promises us to get that data 
+ that we can use in the future. 
+
+
+
+methods of Promise class:
+------------------------
+Promise.all(promises) – waits for all promises to resolve and returns an array of their results. If any of the given promises rejects, it becomes the error of Promise.all, and all other results are ignored.
+Promise.allSettled(promises) – when all of the given promises have either fulfilled or rejected
+	status: "fulfilled" or "rejected"
+	value (if fulfilled) or reason (if rejected).
+Promise.race(promises) – waits for the first promise to settle, and its result/error becomes the outcome.
+Promise.any(promises) – waits for the first promise to fulfill, and its result becomes the outcome. 
+				If all of the given promises are rejected, AggregateError becomes the error of Promise.any.
+Promise.resolve(value) – makes a resolved promise with the given value.
+Promise.reject(error) – makes a rejected promise with the given error.
+
+
+
+3. Async & Await
+-------------
+-async makes a function return a Promise,await makes a function wait for a Promise.
+-Async functions enable the programmer to write promise-based code, Syntax and structure of code  appears like synchronous code but doesn’t block the main thread of execution.
+-async and await makes the program very clean and understandable.there is no need of .then()
+-we can declare the Async functions in JavaScript by specifying the “async” keyword in front of the function definition.
+-For handling the async functions, we use the “await” keyword while invoking to 
+ function to wait for the promise to resolve.
+   
+
+fetch()  vs axios
+==================
+-in fetch() , we get data in 2 steps
+-in axios , data can be fetched in 1 step

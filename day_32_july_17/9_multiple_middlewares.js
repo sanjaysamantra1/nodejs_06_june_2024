@@ -8,12 +8,14 @@ const middleware1 = (req, res, next) => {
 }
 const middleware2 = (req, res, next) => {
     console.log('this is middleware-2');
-    next()
+    res.setHeader("X-New-Policy", "Success");
+  next();
 }
 server.use(middleware2)
 server.use(middleware1)
 
 server.get('/', (req, res) => {
+    console.log('route')
     res.send('Home Page');
 })
 server.get('/users', (req, res) => {
