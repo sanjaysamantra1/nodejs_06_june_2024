@@ -43,3 +43,9 @@ fetch()  vs axios
 ==================
 -in fetch() , we get data in 2 steps
 -in axios , data can be fetched in 1 step
+
+
+https://fakestoreapi.com/products
+
+assignemnt:
+fetch data and print from the above url using 1.then() 2.await 3.axios
