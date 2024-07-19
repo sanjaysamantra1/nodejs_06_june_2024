@@ -1,0 +1,43 @@
+
+CORS(Cross-Origin-Resource-Sharing)
+====
+-Cross Origin Resource Sharing or CORS is a technique to tell the browser whether a application can fetch resources from a different domain or not.
+-By default, browsers will block certain requests if both the client and the server are not in the same origin.
+
+-CORS is a npm package.
+-How to Install
+ npm install cors
+ 
+ 
+How to use cors
+===============
+const cors = require('cors');
+const app = express();
+app.use(cors());
+
+var corsOptions = {
+  origin: 'http://example.com'
+}
+app.use(cors(corsOptions));
+
+
+Default Configuration 
+corsOptions = {
+  "origin": "*",
+  "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
+  "preflightContinue": false,
+  "optionsSuccessStatus": 204
+}
+
+var whitelist = ['http://example1.com', 'http://example2.com']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+
+https://www.npmjs.com/package/cors
