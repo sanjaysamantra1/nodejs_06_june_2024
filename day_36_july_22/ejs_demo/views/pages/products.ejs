@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <%- include('../partials/head.ejs'); %> 
+    </head>
+    <body>
+        <nav>
+            <%- include('../partials/navbar.ejs'); %> 
+        </nav>
+        <main>
+            <h1 class="text-center">This is Product List Page</h1>
+            <hr/>
+            <div class="row">
+                <% products.forEach(function(prod) { %>
+                  <%- include('../partials/product-card.ejs',{prod}); %> 
+                <% }) %>
+            </div>
+        </main>
+        <footer>
+            <%- include('../partials/footer.ejs'); %> 
+        </footer>
+    </body>
+</html>
