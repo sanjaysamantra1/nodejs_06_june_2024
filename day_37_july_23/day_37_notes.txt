@@ -1,0 +1,6 @@
+weather app using EJS template engine
+=====================================
+1. npm init -y
+2. npm i ejs axios
+
+
