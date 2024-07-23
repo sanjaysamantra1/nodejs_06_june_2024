@@ -12,3 +12,22 @@ express --view=ejs project1
 Folder Structure for NodeJS & ExpressJS project
 ================================================
 https://dev.to/mr_ali3n/folder-structure-for-nodejs-expressjs-project-435l
+
+
+
+MongoDB Local
+=============
+1. download and install (MongoDB Community Server)
+   https://www.mongodb.com/try/download/community 
+					(OR)
+   https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.5-signed.msi
+2. Go to the path where MongoDB is installed,and run 'mongod.exe'  
+   By default it is "C:\Program Files\MongoDB\Server\6.0\bin"
+4. Expect Error as the data directory is not set
+   "{"error":"NonExistentPath: Data directory C:\\data\\db\\ not found"
+5. create folder 'c:\data\db'
+6. run 'mongod.exe'
+7. set path for mongo-server(To start mongodb from any path)
+	C:\Program Files\MongoDB\Server\6.0\bin
+
+https://treehouse.github.io/installation-guides/mac/mongo-mac.html
