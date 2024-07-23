@@ -4,3 +4,11 @@ weather app using EJS template engine
 2. npm i ejs axios
 
 
+express generator with template engine
+======================================
+express --view=ejs project1
+
+
+Folder Structure for NodeJS & ExpressJS project
+================================================
+https://dev.to/mr_ali3n/folder-structure-for-nodejs-expressjs-project-435l
