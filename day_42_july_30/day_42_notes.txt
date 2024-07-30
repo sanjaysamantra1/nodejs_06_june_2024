@@ -1,0 +1,52 @@
+Aggregation Pipelines
+======================
+-An aggregation pipeline consists of one or more stages that process documents:
+-Each stage performs an operation on the input documents. For example, a stage can filter documents, group documents, and calculate values.
+-The documents that are output from a stage are passed to the next stage.
+-An aggregation pipeline can return results for groups of documents. For example, return the total, average, maximum, and minimum values.
+
+-db.collectionName.aggregate(pipeline, options)
+ input --> $match  --> $group --> $sort --> output
+
+$match, $group, $limit, $project, $sort, $addFields, $count, $lookup, $out
+
+
+products
+========
+// print the count for each category
+db.products.aggregate([
+    {"$group":{_id:"$category",count:{$sum:1}}}
+])
+
+// print only the name and price for all the products of category-electronics
+db.products.aggregate([
+    {"$match":{category:"Electronics"}},
+    {"$project":{name:1,price:1}}
+])
+
+//print only the name and price of top 2  products of category-electronics
+db.products.aggregate([
+    {"$match":{category:"Electronics"}},
+    {"$project":{name:1,price:1}},
+    {"$sort":{price:-1}},
+    {"$limit":2},
+])
+
+// print the average price for electronics items
+db.products.aggregate([
+    {$match:{category:"Electronics"}},
+    {$group:{_id:null,avgPrice:{$avg:"$price"}}}
+])
+
+// print the top 1 customer with highest order amount
+db.order.aggregate([
+    {$group:{_id:"$customerId",totalAmount:{$sum:"$totalAmount"}}},
+    {$sort:{totalAmount:-1}},
+    {$limit:1}
+])
+
+
+// print average rating for each products
+db.products.aggregate([
+    {"$project":{name:1,avgRating:{$avg:"$rating"}}}
+])
