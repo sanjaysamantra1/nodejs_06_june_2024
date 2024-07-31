@@ -1,0 +1,25 @@
+GraphQL
+=======
+-GraphQL is a query language for APIs.
+-GraphQL provides a complete and understandable description of the data in API.
+-It gives clients the power to ask for exactly what they need and nothing more.
+-Advantages of GraphQL:- declarative, compositional, strongly-typed.
+
+npm install express graphql-http graphql ruru --save
+
+
+
+		REST          		 GraphQL
+=========================================
+1. Server Driven            1. Client Driven
+2. Slower                   2. faster
+3. Over-fetching 		    3. No over-fetching , under-fetching
+4. fileuploading-Yes	    4. File-uploading - No
+5. Simple, Resource driven  5. Micro Services   
+
+
+apollo-server is used to create a graphQL server
+apollo-server-express is used to integrate graphQL with express app
+mongoose is MongoDB object modelling tool to interact with MongoDB
+
+npm i apollo-server  apollo-server-express mongoose
