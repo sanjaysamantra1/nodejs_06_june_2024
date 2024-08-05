@@ -18,7 +18,7 @@ How To Install Redis
 5. open command prompt & run the below command
    redis-cli (redis cli should open 127.0.0.1:6379 )
 
-   Commands
+Commands
 ========
 -To check the existing Data
  KEYS *
