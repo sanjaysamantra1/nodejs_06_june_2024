@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        // listen chat event
+        socket.on('chat', (msgData) => {
+            let { userName, message, time } = msgData;
+            let msg = `${userName} : ${message} ( ${time} )`;
+            $('textarea').val($('textarea').val() + msg + '\n')
+        });
+
+        $(function () {
+            // fetch old chats and display in the textarea
+            let oldChats = [
+                { message: "Hellooo", userName: "Praveen", time: "9:00:00PM" },
+                { message: "Hiiiii", userName: "Vamsi", time: "9:01:00PM" }
+            ]
+            for (chat of oldChats) {
+                let { userName, message, time } = chat;
+                let msg = `${userName} : ${message} ( ${time} )`;
+                $('textarea').val($('textarea').val() + msg + '\n')
+            }
+
+            $('#setNameBtn').on('click', function () {
+                const userName = $('#userName').val();
+                socket.emit('setName', userName);
+                $('#userName').val('');
+                $('#userNameSpan').html(`Hello <b>${userName}</b> Enjoy chatting`);
+            })
+            $('#sendMsg').on('click', function () {
+                socket.emit('chat', { message: $('#chatText').val() })
+                $('#chatText').val('')
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Simple Chat Applciation using NodeJS</h1>
+
+    <p>
+        <input id="userName" placeholder="Enter Your Name..." />
+        <button id="setNameBtn">Set Name</button>
+        <span id="userNameSpan"></span>
+    </p>
+    <textarea style="width:500px;height:300px;"></textarea>
+    <p>
+        <input id="chatText" placeholder="Enter Your message here..." />
+        <button id="sendMsg">Send Msg</button>
+    </p>
+</body>
+
+</html>
