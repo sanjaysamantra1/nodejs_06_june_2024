@@ -1,0 +1,16 @@
+Node.js Streams
+===============
+-Streams are objects that let you read data from a source or write data to a destination in continuous fashion.
+-When we try to read a file, the contents of the file is read and all the content gets saved in memory
+-Streams read chunks of data piece by piece, processing its content without keeping it all in memory.
+
+-4 types of streams in Node.js:
+1.Readable    fs.createReadStream()
+2.writeable   fs.createWriteStream()
+3.Duplex      net.Socket 
+  mix of both the readable and writable streams.
+  both streams are independent of each other.
+4.Transform   
+
+Piping the Streams:
+-Piping is a mechanism where we provide the output of one stream as the input to another stream.
